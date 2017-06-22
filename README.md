@@ -1,2 +1,2 @@
-# ops
-auto-ops
+# opman
+运维管理

@@ -1,0 +1,73 @@
+<div class="modal fade" id="edit_host">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+×
+</button>
+<h4 class="modal-title" id="myModalLabel">
+更新主机
+</h4>
+</div>
+<div class="modal-body">
+<form class="form-horizontal"  action="/edit_host"  method="post"  id="edit_from" >
+<script src="/static/js/EditHost.js"></script>
+  <div class="form-group">
+      <label for="hostname"  class="col-sm-2 control-label">主机名</label>
+      <div class="col-sm-10">
+      <input type="text" class="form-control" id="hostname" name="hostname"
+       style="width:251px" placeholder="请输入主机名" >
+      </div>
+   </div>
+   <div class="form-group">
+      <label for="ip"  class="col-sm-2 control-label">IP</label>
+      <div class="col-sm-10">
+      <input type="text" class="form-control" id="ip" name="ip"
+       style="width:251px" placeholder="请输入ip地址" >
+      </div>
+   </div>
+   <div class="form-group">
+      <label for="os"  class="col-sm-2 control-label">OS</label>
+      <div class="col-sm-10">
+      <input type="text" class="form-control" id="os" name="os"
+       style="width:251px"  >
+      </div>
+   </div>
+   <div class="form-group">
+      <label for="cpu"  class="col-sm-2 control-label">CPU</label>
+      <div class="col-sm-10">
+      <input type="text" class="form-control" id="cpu" name="cpu"
+       style="width:251px"  >
+      </div>
+   </div>
+    <div class="form-group">
+      <label for="mem"  class="col-sm-2 control-label">内存</label>
+      <div class="col-sm-10">
+      <input type="text" class="form-control" id="mem" name="mem"
+       style="width:251px"  >
+      </div>
+   </div>
+    <div class="form-group">
+      <label for="disk"  class="col-sm-2 control-label">硬盘</label>
+      <div class="col-sm-10">
+      <input type="text" class="form-control" id="disk" name="disk"
+       style="width:251px"  >
+      </div>
+   </div>
+   <div class="form-group">
+       <div class="col-sm-offset-2 col-sm-2">
+            <label>
+              <input  name="status" type="checkbox" value="1"> 运行中
+            </label>
+       </div>
+   </div>
+<div class="modal-footer">
+   <input type="hidden"  id="id" name="id" >
+   <button type="submit" id="create_button"  class="btn btn-primary">保存</button>
+   <button type="button" class="btn btn-danger" data-dismiss="modal">取消</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+

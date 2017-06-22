@@ -1,0 +1,60 @@
+{% include "../../moban.html %}
+<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+ <input name="create" type="button" class="btn btn-primary btn-sm" value="新建主机" data-toggle="modal" data-target="#create_host" >
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>id</th>
+                  <th>主机名</th>
+                  <th>ip</th>
+                  <th>操作系统</th>
+                  <th>CPU</th>
+                  <th>内存</th>
+                  <th>磁盘</th>
+                  <th>运行状态</th>
+                </tr>
+              </thead>
+            <tbody>
+                  {% for data in select %}
+                <tr>
+                  <td>{{ data[0] }}</td>
+                  <td>{{ data[1] }}</td>
+                  <td>{{ data[2] }}</td>
+                  <td>{{ data[5] }}</td>
+                  <td>{{ data[4] }}</td>
+                  <td>{{ data[7] }}</td>
+                  <td>{{ data[6] }}</td>
+                  {% if data[3] ==1 %}
+                  <td style="color:#0C0">运行中</td>
+                  {% else %}
+                  <td style="color:#F00">停止中</td>
+                  {% end %}
+                  <td><input name="update" type="button" class="btn btn-success btn-sm" value="更新主机"
+                  data-toggle="modal" data-target="#edit_host"  onclick="update(this)"; > </td>
+                  <td><input type="button"  class="btn btn-danger btn-sm" value="删除主机"
+                  data-toggle="modal" data-target="#del_host"  onclick="del(this)"; /></td>
+                </tr>
+                  {% end %}
+              </tbody>
+            </table>
+</div>
+{% include "del_host.html" %}
+{% include "create_host.html" %}
+{% include "edit_host.html" %}
+
+<script>
+function del(obj){
+    var tds=$(obj).parent().parent().find('td');
+    $('#delete').val(tds.eq(0).text());
+	};
+
+
+function update(obj){
+   var tds=$(obj).parent().parent().find('td');
+   $('#id').val(tds.eq(0).text());
+   $('#hostname').val(tds.eq(1).text());
+   $('#ip').val(tds.eq(3).text());
+   $('#update').modal('show');
+	};
+
+</script>

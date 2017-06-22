@@ -1,0 +1,35 @@
+{% include "moban.html %}
+<div class="col-md-10 col-md-offset-2  main" >
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>id</th>
+                  <th>项目名</th>
+                  <th>发布者</th>
+                  <th>发布版本</th>
+                  <th>发布状态</th>
+                  <th>发布时间</th>
+                </tr>
+              </thead>
+            <tbody>
+                  {% for data in select %}
+                <tr>
+                  <td>{{ data[0] }}</td>
+                  {% if data[1] == 1 %}
+                  <td>天下信用</td>
+                  {% else %}
+                  <td>征信系统</td>
+                  {% end %}
+                  <td>{{ data[4] }}</td>
+                  <td>{{ data[5] }}</td>
+                  {% if data[7] ==0 %}
+                  <td style="color:#0C0">失败</td>
+                  {% else %}
+                  <td style="color:#F00">成功</td>
+                  {% end %}
+                  <td>{{ data[6] }}</td>
+                </tr>
+                  {% end %}
+              </tbody>
+            </table>
+</div>>

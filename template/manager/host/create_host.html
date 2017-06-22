@@ -1,0 +1,73 @@
+<div class="modal fade" id="create_host">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+<h4 class="modal-title" id="myModalLabel">
+新建主机
+</h4>
+</div>
+<div class="modal-body">
+<form class="form-horizontal"  method="post"  id="create_from" >
+<script src="/static/js/CreateHost.js"></script>
+  <div class="form-group">
+      <label for="hostname"  class="col-sm-2 control-label">主机名</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="create_hostname" name="create_hostname"
+          style="width:251px" placeholder="请输入主机名" >
+      </div> 
+  </div>
+  <div class="form-group">
+      <label for="ip"  class="col-sm-2 control-label">IP</label>
+      <div class="col-sm-10">
+         <input type="text" class="form-control" id="create_ip" name="create_ip"
+            placeholder="主机ip地址" style="width:251px">
+      </div>
+  </div>
+ <div class="form-group">
+      <label for="os"  class="col-sm-2 control-label">OS</label>
+      <div class="col-sm-10">
+         <input type="text" class="form-control" id="create_os" name="create_os"
+            placeholder="操作系统" style="width:251px">
+      </div>
+  </div>
+<div class="form-group">
+      <label for="cpu"  class="col-sm-2 control-label">CPU</label>
+      <div class="col-sm-10">
+         <input type="text" class="form-control" id="create_cpuinfo" name="create_cpuinfo"
+            placeholder="CPU信息" style="width:251px">
+      </div>
+  </div>
+<div class="form-group">
+      <label for="mem"  class="col-sm-2 control-label">内存</label>
+      <div class="col-sm-10">
+         <input type="text" class="form-control" id="create_meminfo" name="create_meminfo"
+            placeholder="内存信息" style="width:251px">
+      </div>
+  </div>
+<div class="form-group">
+      <label for="disk"  class="col-sm-2 control-label">硬盘</label>
+      <div class="col-sm-10">
+         <input type="text" class="form-control" id="create_diskinfo" name="create_diskinfo"
+            placeholder="硬盘信息" style="width:251px">
+      </div>
+  </div>
+
+
+  <div class="form-group">
+       <div class="col-sm-offset-2 col-sm-2">
+            <label>
+              <input name="create_statusinfo" type="checkbox" value="1"> 运行中
+            </label>
+       </div>
+  </div>
+
+<div class="modal-footer">
+  <button type="submit" id="button"  class="btn btn-primary">保存</button>
+  <button type="button" class="btn btn-danger" data-dismiss="modal">取消</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
